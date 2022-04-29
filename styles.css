@@ -4,7 +4,7 @@
     padding: 0;
 }
 html {
-    font-size: 24px;
+    font-size: 17px;
 }
 input {
     -webkit-appearance: none;
@@ -18,18 +18,22 @@ textarea {
     font-family: inherit;
     font-size: 100%;
     width: 70%;
+    background-color: #e5e5e5;
 }
 
 body {
     display: grid;
     justify-content: center;
     gap: 50px;
+    background-color: #e5e5e5;
+    color: rgb(65, 65, 65);
+    font-family: -apple-system, sans-serif;
 }
 #headings {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 30px;
+    font-size: 2em;
     place-self: center;
 }
 
@@ -46,4 +50,7 @@ body {
     display: grid;
     justify-items: center;
     grid-template-columns: 5fr 1fr 5fr 1fr 5fr 1fr;
+}
+#clear {
+    background-color: #e5e5e5;
 }
