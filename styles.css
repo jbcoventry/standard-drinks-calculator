@@ -9,44 +9,41 @@ html {
 input {
     -webkit-appearance: none;
     appearance: none;
-  }
+}
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     font-family: inherit;
     font-size: 100%;
-  }
+    width: 70%;
+}
 
 body {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(10, 1fr)
-
+    gap: 50px;
 }
-#headings{
+#headings {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-column:2/3;
-    grid-row: 2/3;
     font-size: 30px;
     place-self: center;
 }
 
-.units{
+.units {
     place-self: end start;
+    font-size: 0.6em;
 }
-#footer{
-    grid-column: 2/3;
-    grid-row: -1/-2;
+
+#footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-#drink1{
+.drink {
     display: grid;
     justify-items: center;
     grid-template-columns: 5fr 1fr 5fr 1fr 5fr 1fr;
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column: 2/3;
 }

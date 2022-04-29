@@ -13,22 +13,19 @@
             <div>ABV</div>
             <div>Standard Drinks</div>
         </div>
-        <div id="drink1">
-                <input id="volume1" type="text" inputmode="decimal" />
-                <p class="units">ml</p>
-                <input id="abv1" type="text" inputmode="decimal" />
-                <p class="units">%</p>
-                <input id="result1" type="text" disabled/>
-                <p class="units">drinks</p>
+        <div class="drink" id="drink1">
+            <input class="volume" id="volume1" type="text" inputmode="decimal" />
+            <p class="units">ml</p>
+            <input class="abv" id="abv1" type="text" inputmode="decimal" />
+            <p class="units">%</p>
+            <div class="result" id="result1"></div>
+            <p class="units">drinks</p>
         </div>
         <div id="footer">
             <button id="clear">clear</button>
             <p>Total Drinks:</p>
-            <input id="total" type="text" disabled/>
-
+            <div id="total">0</div>
         </div>
-
+        <script src="script.js"></script>
     </body>
 </html>
-
-
