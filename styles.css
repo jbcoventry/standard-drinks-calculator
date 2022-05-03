@@ -18,39 +18,45 @@ textarea {
     font-family: inherit;
     font-size: 100%;
     width: 70%;
-    background-color: #e5e5e5;
+    color: inherit;
+    background-color: inherit;
+    height: 50px;
+    text-align: center;
 }
 
 body {
     display: grid;
     justify-content: center;
     gap: 50px;
-    background-color: #e5e5e5;
     color: rgb(65, 65, 65);
-    font-family: -apple-system, sans-serif;
+    font-family: -system-ui, -apple-system, sans-serif;
 }
 #headings {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 2em;
-    place-self: center;
+    font-size: 1em;
 }
 
 .units {
     place-self: end start;
-    font-size: 0.6em;
+}
+#main-heading{
+    display: grid;
+    justify-items: center;
+    font-size: 2em;
 }
 
 #footer {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
 }
 .drink {
     display: grid;
     justify-items: center;
-    grid-template-columns: 5fr 1fr 5fr 1fr 5fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
-#clear {
-    background-color: #e5e5e5;
+.result{
+    place-self: center center;
 }

@@ -74,11 +74,8 @@ const createNewDrink = () => {
     newDrink.setAttribute("id", `drink${drinkNumber}`);
     newDrink.innerHTML = `
 <input class="volume" id="volume${drinkNumber}" type="text" inputmode="decimal" value="${previousVolume}"/>
-<p class="units">ml</p>
 <input class="abv" id="abv${drinkNumber}" type="text" inputmode="decimal" />
-<p class="units">%</p>
 <div class="result" id="result${drinkNumber}"></div>
-<p class="units">drinks</p>
 `;
     document.getElementById(`drink${totalDrinks()}`).after(newDrink);
 };
