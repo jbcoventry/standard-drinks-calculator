@@ -6,10 +6,6 @@
 html {
     font-size: 17px;
 }
-input {
-    -webkit-appearance: none;
-    appearance: none;
-}
 
 button,
 input,
@@ -22,41 +18,92 @@ textarea {
     background-color: inherit;
     height: 50px;
     text-align: center;
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 5px;
 }
 
 body {
     display: grid;
     justify-content: center;
-    gap: 50px;
     color: rgb(65, 65, 65);
     font-family: -system-ui, -apple-system, sans-serif;
+    grid-template-columns: 1fr 1fr;
+    overscroll-behavior: none;
+}
+#main {
+    display: grid;
+    justify-content: center;
+    gap: 50px;
 }
 #headings {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     font-size: 1em;
+    grid-column: 1/2;
 }
 
-.units {
-    place-self: end start;
-}
-#main-heading{
+#main-heading {
     display: grid;
     justify-items: center;
     font-size: 2em;
+    grid-column: 1/2;
 }
 
 #footer {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/2;
+}
+#clear {
+    border: 1px solid rgb(65, 65, 65);
+    border-radius: 5px;
+    height: 50px;
+    width: 70%;
+    display: grid;
+    place-items: center;
 }
 .drink {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 1/2;
 }
-.result{
+.result {
     place-self: center center;
+}
+
+#numpad {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    gap: 10px;
+    padding: 30px;
+}
+.numpad {
+    display: grid;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    font-size: 3em;
+    place-items: center;
+    border-radius: 15px;
+}
+@media (orientation: portrait) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #numpad {
+        display: none;
+    }
+}
+
+#num5 {
+    display: none;
 }

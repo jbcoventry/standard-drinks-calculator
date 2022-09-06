@@ -13,21 +13,38 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="main-heading">Standard Drink Calculator</div>
-        <div id="headings">
-            <div>Volume (ml)</div>
-            <div>ABV (%)</div>
-            <div>Standard Drinks</div>
+        <div id="main">
+            <div id="main-heading">Standard Drink Calculator</div>
+            <div id="headings">
+                <div>Volume (ml)</div>
+                <div>ABV (%)</div>
+                <div>Standard Drinks</div>
+            </div>
+            <div class="drink" id="drink1">
+                <input class="volume" id="volume1" type="text" inputmode="decimal" readonly />
+                <input class="abv" id="abv1" type="text" inputmode="decimal" readonly />
+                <div class="result" id="result1"></div>
+            </div>
+
+            <div id="footer">
+                <div id="clear">Clear</div>
+                <p>Total Drinks:</p>
+                <div id="total">0</div>
+            </div>
         </div>
-        <div class="drink" id="drink1">
-            <input class="volume" id="volume1" type="text" inputmode="decimal" />
-            <input class="abv" id="abv1" type="text" inputmode="decimal" />
-            <div class="result" id="result1"></div>
-        </div>
-        <div id="footer">
-            <button id="clear">Clear</button>
-            <p>Total Drinks:</p>
-            <div id="total">0</div>
+        <div id="numpad">
+            <button class="numpad" id="num1">1</button>
+            <button class="numpad" id="num2">2</button>
+            <button class="numpad" id="num3">3</button>
+            <button class="numpad" id="num4">4</button>
+            <button class="numpad" id="num5">5</button>
+            <button class="numpad" id="num6">6</button>
+            <button class="numpad" id="num7">7</button>
+            <button class="numpad" id="num8">8</button>
+            <button class="numpad" id="num9">9</button>
+            <button class="numpad" id="numDecimal">.</button>
+            <button class="numpad" id="num0">0</button>
+            <button class="numpad" id="numDelete">&#9003;</button>
         </div>
         <script src="script.js"></script>
     </body>

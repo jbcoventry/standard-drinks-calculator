@@ -1,4 +1,5 @@
 const totalDrinks = () => document.querySelectorAll(".drink").length;
+let currentInputID = "volume1";
 
 document.addEventListener("input", (event) => {
     calculate();
@@ -10,7 +11,49 @@ document.addEventListener("input", (event) => {
         createNewDrink();
     }
 });
+document.addEventListener(
+    "blur",
+    function () {
+        document.getElementById("abv1").setAttribute("readonly", "");
+    },
+    true
+);
+document.addEventListener("click", function (event) {
+    if (event.target.matches("input")) {
+        currentInputID = event.target.id;
+    }
+    if (
+        event.target.matches(
+            "#num1, #num2, #num3, #num4, #num5, #num6, #num7, #num8, #num9, #num0, #numDecimal"
+        )
+    ) {
+        numpadAdd(event.target.innerHTML);
+    }
+    if (event.target.matches("#numDelete")) {
+        numpadDelete();
+    }
+    if (event.target.matches("#abv1")) {
+        event.target.removeAttribute("readonly");
+    }
+    if (event.target.matches("#clear")) {
+        clearAction();
+    }
+    if (event.target.matches("input")) {
+        event.target.value = "";
+    }
+    numpadOffOnner();
+    calculate();
+    totaller();
+});
 
+addEventListener("resize", (event) => {});
+const numpadOffOnner = () => {
+    if (window.matchMedia("(orientation:portrait)").matches) {
+        document
+            .querySelectorAll("input")
+            .forEach((input) => setAttribute("Butt", "butt"));
+    }
+};
 const calculate = () => {
     let toBeCalculated = totalDrinks();
     const innerCalculate = () => {
@@ -27,7 +70,7 @@ const calculate = () => {
     innerCalculate();
 };
 const standardDrinkFormula = (volumeInMl, percentage) => {
-    const formulaResult = Math.round(volumeInMl * percentage * 0.00789) / 10;
+    const formulaResult = Math.round(volumeInMl * percentage * 0.0789) / 100;
     if (formulaResult) {
         return formulaResult;
     } else {
@@ -40,7 +83,7 @@ const totaller = () => {
     document
         .querySelectorAll(".result")
         .forEach((element) => (newTotal += parseFloat(element.innerHTML)));
-    document.getElementById("total").innerHTML = Math.round(newTotal * 10) / 10;
+    document.getElementById("total").innerHTML = newTotal;
 };
 
 let deleteDrinks = () => {
@@ -55,16 +98,15 @@ let clearAction = () => {
     deleteDrinks();
     totaller();
 };
-document.addEventListener("click", function (event) {
-    if (event.target.matches("#clear")) {
-        clearAction();
-    }
-    if (event.target.matches("input")) {
-        event.target.value = "";
-    }
-    calculate();
-    totaller();
-});
+
+const numpadAdd = (input) => {
+    document.getElementById(`${currentInputID}`).value += input;
+};
+const numpadDelete = () => {
+    let valueArray = document.getElementById(`${currentInputID}`).value.split("");
+    valueArray.splice(-1, 1);
+    document.getElementById(`${currentInputID}`).value = valueArray.join("");
+};
 
 const createNewDrink = () => {
     const drinkNumber = totalDrinks() + 1;
