@@ -7,44 +7,47 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="Drinks Calc" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <link rel="icon" href="drinks-calc-icon.png" />
-        <link rel="apple-touch-icon" href="drinks-calc-icon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <meta name="msapplication-TileColor" content="#00aba9" />
+        <meta name="theme-color" content="#ffffff" />
         <title>Drinks Calc</title>
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <div id="main">
-            <div id="main-heading">Standard Drink Calculator</div>
-            <div id="headings">
-                <div>Volume (ml)</div>
-                <div>ABV (%)</div>
-                <div>Standard Drinks</div>
-            </div>
-            <div class="drink" id="drink1">
-                <input class="volume" id="volume1" type="text" inputmode="decimal" readonly />
-                <input class="abv" id="abv1" type="text" inputmode="decimal" readonly />
-                <div class="result" id="result1"></div>
-            </div>
-
-            <div id="footer">
-                <div id="clear">Clear</div>
-                <p>Total Drinks:</p>
-                <div id="total">0</div>
-            </div>
+        <div id="header">
+            <svg
+                id="logo"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="2.5rem"
+                height="2.5rem"
+            >
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                    d="M4 2h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm1 2v16h14V4H5zm2 2h10v4H7V6zm0 6h2v2H7v-2zm0 4h2v2H7v-2zm4-4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-4h2v6h-2v-6z"
+                />
+            </svg>
+            <h1>Standard Drink Calculator</h1>
         </div>
-        <div id="numpad">
-            <button class="numpad" id="num1">1</button>
-            <button class="numpad" id="num2">2</button>
-            <button class="numpad" id="num3">3</button>
-            <button class="numpad" id="num4">4</button>
-            <button class="numpad" id="num5">5</button>
-            <button class="numpad" id="num6">6</button>
-            <button class="numpad" id="num7">7</button>
-            <button class="numpad" id="num8">8</button>
-            <button class="numpad" id="num9">9</button>
-            <button class="numpad" id="numDecimal">.</button>
-            <button class="numpad" id="num0">0</button>
-            <button class="numpad" id="numDelete">&#9003;</button>
+        <div id="headings">
+            <div>Volume (ml)</div>
+            <div>ABV (%)</div>
+            <div>Standard Drinks</div>
+        </div>
+        <div class="drink" id="drink1">
+            <input class="volume" id="volume1" type="text" inputmode="decimal" />
+            <input class="abv" id="abv1" type="text" inputmode="decimal" />
+            <div class="result" id="result1"></div>
+        </div>
+
+        <div id="footer">
+            <div id="clear">Clear</div>
+            <p>Total Drinks:</p>
+            <div id="total">0</div>
         </div>
         <script src="script.js"></script>
     </body>
